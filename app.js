@@ -14,6 +14,8 @@ const postRouter = require("./routes/postRoute");
 const AppError = require("./utils/AppError");
 
 const app = express();
+/<-- serving static files
+app.use(express.static(`${__dirname}/public`));
 //cors
 app.use(cors());
 //<-- parsing data to the backend
